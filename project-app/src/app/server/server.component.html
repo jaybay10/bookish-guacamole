@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="" class="form-label">Server name</label>
+            <input type="text" class="form-control" [(ngModel)]="serverName">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="" class="form-label">Servers status</label>
+            <input type="text" class="form-control" [(ngModel)]="serverStatus">
+        </div>
+    </div>
+    <button class="btn btn-primary" [disabled]="btnDisabled" (click)="addServer()">Add Server</button>
+    <button class="btn btn-danger clear-servers" (click)="clearFields()">Clear</button>
+</div>
+
+<div class="container">
+        <div class="col-md-12" *ngFor="let item of serverInfo">
+            {{item.serverName}} - {{item.serverStatus}}
+        </div>
+    </div>
+
+
+
+
